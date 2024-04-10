@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "./routes/Home"
 import NoMatch from "./routes/NoMatch"
+import Timetable from "./routes/Timetable"
 
 const App = () => {
 
@@ -8,7 +9,9 @@ const App = () => {
     <>
       <Routes>
         <Route path='*' element={<NoMatch />} />
-        <Route path='/' element={<Home />} />
+        <Route path="/" element={<Home />}>
+          <Route path=":semesterId" element={<Timetable />} />
+        </Route>
       </Routes>
     </>
   )
