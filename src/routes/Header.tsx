@@ -14,13 +14,13 @@ const Header = () => {
         {list.map((label, index) => (
           <li className='mx-2'>
             <NavLink
-            to={String(index)}
-            className={({ isActive }) =>
-              isActive ? "underline underline-offset-2" : ""
-            }
-          >
-            {label}
-          </NavLink>
+              to={String(index)}
+              className={({ isActive }) =>
+                isActive ? "underline underline-offset-2" : ""
+              }
+            >
+              {label}
+            </NavLink>
           </li>
         ))}
       </ul>
