@@ -12,7 +12,7 @@ const Header = () => {
       <h1 className="text-2xl ml-10">Timetable</h1>
       <ul className=' flex items-center ml-5'>
         {list.map((label, index) => (
-          <li className='mx-2'>
+          <li key={index} className='mx-2'>
             <NavLink
               to={String(index)}
               className={({ isActive }) =>
